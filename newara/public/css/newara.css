@@ -452,3 +452,73 @@ body {
   font-size: 0.85rem;
   margin-top: 2rem;
 }
+/* ==== SIDEBAR MENU CUSTOMIZATION ==== */
+
+/* Sidebar container */
+.desk-sidebar {
+    background-color: #6a1b9a !important; /* deep plum background */
+    color: #fff !important;
+    border-right: none;
+    box-shadow: 2px 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar section headers (e.g., "Modules") */
+.desk-sidebar .sidebar-label {
+    color: #e1bee7 !important;
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding-left: 16px;
+}
+
+/* Sidebar links (modules) */
+.desk-sidebar .sidebar-item {
+    color: #fff !important;
+    border-radius: 6px;
+    padding: 10px 14px;
+    margin: 4px 8px;
+    transition: all 0.2s ease;
+}
+
+/* On hover */
+.desk-sidebar .sidebar-item:hover {
+    background-color: #8e24aa !important;
+    color: #fff !important;
+}
+
+/* Active/selected module */
+.desk-sidebar .sidebar-item.active,
+.desk-sidebar .sidebar-item:focus {
+    background-color: #ab47bc !important;
+    color: #fff !important;
+    font-weight: 600;
+}
+
+/* Icons in the sidebar */
+.desk-sidebar .sidebar-item .sidebar-item-icon {
+    color: #f3e5f5 !important;
+    margin-right: 8px;
+}
+
+/* Expand/collapse icons */
+.desk-sidebar .collapse-indicator {
+    color: #d1c4e9 !important;
+}
+
+/* Scrollbar styling */
+.desk-sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+.desk-sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+.navbar {
+    background-color: #6a1b9a !important;
+    border: none;
+}
+.navbar .navbar-brand,
+.navbar .navbar-nav > li > a {
+    color: #fff !important;
+}
