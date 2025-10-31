@@ -37,15 +37,19 @@
 }
 
 /* -------------------------------
-   SIDEBAR
+   SIDEBAR (White Style)
 --------------------------------*/
-.layout-side-section {
+.layout-side-section,
+.desk-sidebar,
+.standard-sidebar-section {
   background-color: var(--sidebar-bg) !important;
-  border-right: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color) !important;
   box-shadow: 1px 0 4px var(--shadow-color);
 }
 
-.desk-sidebar-item {
+/* Sidebar Items */
+.desk-sidebar-item,
+.standard-sidebar-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
@@ -54,28 +58,42 @@
   font-weight: 500;
   border-radius: 8px;
   margin: 4px 8px;
+  background-color: transparent !important;
   transition: all 0.2s ease;
 }
 
-.desk-sidebar-item:hover {
+/* Hover and Active States */
+.desk-sidebar-item:hover,
+.standard-sidebar-item:hover {
   background-color: var(--sidebar-hover-bg) !important;
+  color: var(--brand-color) !important;
 }
 
-.desk-sidebar-item.selected {
+.desk-sidebar-item.selected,
+.standard-sidebar-item.selected {
   background-color: var(--sidebar-active-bg) !important;
   color: var(--brand-color) !important;
   font-weight: 600;
 }
 
 /* Sidebar Icons */
-.desk-sidebar-item .icon {
+.desk-sidebar-item .icon,
+.standard-sidebar-item .icon {
   color: var(--brand-color) !important;
-  opacity: 0.9;
+  opacity: 0.85;
 }
 
 /* Collapse/Expand arrows */
 .sidebar-group .collapse-indicator {
   color: var(--brand-color);
+}
+
+/* Sidebar Section Titles */
+.sidebar-group .sidebar-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin: 10px 14px 4px;
 }
 
 /* -------------------------------
