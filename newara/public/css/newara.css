@@ -250,3 +250,53 @@ body, .page-container {
   font-size: 0.75rem;
   margin: 10px 14px 4px;
 }
+/* 🎨 Final Fix: White Sidebar with Light Hover Effects */
+.standard-sidebar-section.nested-container {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-right: 1px solid #e2e8f0 !important;
+  box-shadow: 1px 0 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Sidebar items */
+.standard-sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 10px 14px !important;
+  color: #1e293b !important;
+  font-weight: 500;
+  border-radius: 8px;
+  margin: 4px 8px;
+  transition: all 0.2s ease;
+  background: transparent !important;
+}
+
+/* Hover effect */
+.standard-sidebar-item:hover {
+  background-color: #f3f0f2 !important;
+  color: #714B67 !important;
+}
+
+/* Active/selected menu item */
+.standard-sidebar-item.selected {
+  background-color: #f8eaf3 !important;
+  color: #714B67 !important;
+  font-weight: 600;
+}
+
+/* Icons */
+.standard-sidebar-item .icon {
+  color: #714B67 !important;
+  opacity: 0.9;
+}
+
+/* Section labels like "SGE", "Operations" */
+.standard-sidebar-section .sidebar-label {
+  color: #64748b !important;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin: 10px 14px 4px;
+}
