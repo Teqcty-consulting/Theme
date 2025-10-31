@@ -425,3 +425,86 @@ input[type="checkbox"]:checked {
 @media (min-width: 992px) {
   :root {}
 }
+/* ======= CLEAN WHITE SIDEBAR THEME ======= */
+.standard-sidebar-section.nested-container,
+.layout-side-section,
+.desk-sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e6e9ee !important;
+}
+
+/* Sidebar items */
+.standard-sidebar-item,
+.desk-sidebar-item,
+.sidebar-item {
+  background: transparent !important;
+  color: #2a2a2a !important;
+  border-radius: 8px !important;
+  margin: 4px 8px !important;
+  padding: 8px 12px !important;
+  transition: all 0.2s ease-in-out;
+  font-weight: 500;
+}
+
+/* Hover state */
+.standard-sidebar-item:hover,
+.desk-sidebar-item:hover,
+.sidebar-item:hover {
+  background-color: #f6f7f9 !important;
+  color: #714B67 !important;
+  transform: translateX(2px);
+}
+
+/* Active/selected menu item */
+.standard-sidebar-item.selected,
+.desk-sidebar-item.selected,
+.sidebar-item.selected {
+  background-color: #f1e8f2 !important;
+  border-left: 3px solid #714B67 !important;
+  color: #714B67 !important;
+  font-weight: 600;
+}
+
+/* Icons */
+.standard-sidebar-item .es-icon,
+.desk-sidebar-item .es-icon,
+.sidebar-item .es-icon {
+  color: #714B67 !important;
+  opacity: 0.9;
+  margin-right: 6px;
+}
+
+/* Active icon */
+.standard-sidebar-item.selected .es-icon,
+.desk-sidebar-item.selected .es-icon,
+.sidebar-item.selected .es-icon {
+  color: #714B67 !important;
+}
+
+/* Submenu / nested section */
+.standard-sidebar-section .nested-container {
+  background: #ffffff !important;
+  box-shadow: none !important;
+}
+
+/* Section titles */
+.sidebar-group-title {
+  color: #888 !important;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+  margin: 6px 12px 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+/* Scrollbar subtle style */
+.layout-side-section::-webkit-scrollbar {
+  width: 6px;
+}
+.layout-side-section::-webkit-scrollbar-thumb {
+  background: #d1d1d1;
+  border-radius: 4px;
+}
+.layout-side-section::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd;
+}
