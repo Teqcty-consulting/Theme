@@ -3,7 +3,7 @@
 	--btn-primary: #714B67;
 	--btn-secondary: #017E8480;
 	--secondary: #017E84;
-	--navbar-bg: #714B67;
+	--navbar-bg: #8e2254;
 	--text-btn-color: white;
 	--table-border-color: #714b6740;
 	--btn-default-hover-bg: white;
@@ -342,428 +342,76 @@ input[type="checkbox"]:checked {
   background-color:  white !important;
   color: black;
 }
-/* ===============================
-   FINAL FORCE-OVERRIDE: White Sidebar + Modern Look
-   Place this at the VERY END of your CSS file
-   =============================== */
+/* --- SIDEBAR DESIGN --- */
 
-/* ensure nothing behind still visible */
-.standard-sidebar-section.nested-container,
-.layout-side-section,
+.standard-sidebar-section,
 .desk-sidebar,
-.desk-sidebar .standard-sidebar-section,
-.layout-side-section .desk-sidebar,
-.desk-sidebar .desk-sidebar-item-container,
-.standard-sidebar-section.nested-container:before,
-.standard-sidebar-section.nested-container:after {
-  background: #ffffff !important;
-  background-color: #ffffff !important;
-  background-image: none !important;
-  box-shadow: 2px 0 6px rgba(0,0,0,0.04) !important;
-  border-right: 1px solid #e6e9ee !important;
-}
-
-/* override any inline background on child elements */
-.standard-sidebar-section.nested-container *[style*="background"],
-.standard-sidebar-section.nested-container *[style*="background-color"] {
-  background: transparent !important;
-  background-color: transparent !important;
-}
-
-/* sidebar items */
-.standard-sidebar-section.nested-container .desk-sidebar-item,
-.standard-sidebar-section.nested-container .sidebar-item,
-.standard-sidebar-section.nested-container .standard-sidebar-item {
-  color: #21303a !important;
-  background: transparent !important;
-  border-radius: 10px !important;
-  margin: 6px 8px !important;
-  padding: 8px 12px !important;
-  transition: background-color .18s ease, color .18s ease, transform .18s ease;
-}
-
-/* hover/active */
-.standard-sidebar-section.nested-container .desk-sidebar-item:hover,
-.standard-sidebar-section.nested-container .sidebar-item:hover,
-.standard-sidebar-section.nested-container .standard-sidebar-item:hover {
-  background-color: #faf5f8 !important; /* light pink-ish hover */
-  color: var(--btn-primary) !important;
-  transform: translateX(2px);
-}
-
-.standard-sidebar-section.nested-container .desk-sidebar-item.selected,
-.standard-sidebar-section.nested-container .sidebar-item.selected,
-.standard-sidebar-section.nested-container .standard-sidebar-item.selected,
-.standard-sidebar-section.nested-container .desk-sidebar-item.active,
-.standard-sidebar-section.nested-container .sidebar-item.active {
-  background-color: #f3e6ef !important; /* selected */
-  color: var(--btn-primary) !important;
-  font-weight: 600 !important;
-  border-left: 3px solid var(--btn-primary) !important;
-}
-
-/* icons */
-.standard-sidebar-section.nested-container .es-icon,
-.standard-sidebar-section.nested-container .icon {
-  color: var(--btn-primary) !important;
-  opacity: 0.95 !important;
-}
-
-/* remove any background image layering */
-.standard-sidebar-section.nested-container,
-.standard-sidebar-section.nested-container * {
-  background-image: none !important;
-}
-
-/* ensure main content width reflows properly */
-.layout-main-section {
-  margin-left: 250px !important;
-  width: calc(100% - 250px) !important;
-}
-
-/* make sure this override is last */
-@media (min-width: 992px) {
-  :root {}
-}
-/* === Pure White Sidebar - Refined === */
 .layout-side-section,
-.standard-sidebar-section.nested-container,
-.desk-sidebar {
-  background: #ffffff !important;
-  border-right: 1px solid #e9ecef !important;
-  box-shadow: none !important;
+.page-container .desk-sidebar,
+#sidebar,
+.sidebar,
+.standard-sidebar-section.nested-container {
+  background-color: #ffffff !important;  /* white sidebar */
+  border-right: 1px solid #e0e0e0 !important;
+  width: 250px !important;
+  min-width: 250px !important;
+  padding: 10px 0 !important;
 }
 
-/* Sidebar item base */
-.standard-sidebar-item,
-.desk-sidebar-item,
-.sidebar-item {
-  background: transparent !important;
-  color: #2f2f2f !important;
-  padding: 8px 12px !important;
-  border-radius: 8px !important;
-  margin: 3px 8px !important;
-  font-weight: 500;
-  transition: all 0.2s ease;
-}
-
-/* Hover */
-.standard-sidebar-item:hover,
-.desk-sidebar-item:hover,
-.sidebar-item:hover {
-  background-color: #f8f9fa !important;
-  color: #714B67 !important;
-}
-
-/* Active / selected item */
-.standard-sidebar-item.selected,
-.desk-sidebar-item.selected,
-.sidebar-item.selected {
-  background-color: #f4edf7 !important;
-  color: #714B67 !important;
-  font-weight: 600;
-  border-left: 3px solid #714B67 !important;
-}
-
-/* Icons */
-.standard-sidebar-item .es-icon,
-.desk-sidebar-item .es-icon,
-.sidebar-item .es-icon {
-  color: #714B67 !important;
-  opacity: 0.85;
-  margin-right: 6px;
-  font-size: 1rem;
-}
-
-/* Section titles */
-.sidebar-group-title {
-  color: #9aa0a6 !important;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  margin: 8px 12px 4px;
-}
-
-/* Scrollbar subtle */
-.layout-side-section::-webkit-scrollbar {
-  width: 6px;
-}
-.layout-side-section::-webkit-scrollbar-thumb {
-  background: #dadada;
-  border-radius: 4px;
-}
-.layout-side-section::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
-}
-/* === WHITE SIDEBAR REFINEMENT === */
-.layout-side-section,
-.standard-sidebar-section.nested-container,
-.desk-sidebar {
-  background: #ffffff !important;
-  border-right: 1px solid #eaeaea !important;
-  box-shadow: none !important;
+/* Remove extra space between sidebar and main content */
+.layout-main-section-wrapper,
+.page-content .layout-main-section,
+.page-container .layout-main-section {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
 }
 
 /* Sidebar items */
-.standard-sidebar-item,
-.desk-sidebar-item,
-.sidebar-item {
-  background: transparent !important;
-  color: #2f2f2f !important;
-  padding: 8px 14px !important;
+.desk-sidebar .desk-sidebar-item,
+.standard-sidebar-section .sidebar-item,
+.sidebar-item-label {
+  display: flex !important;
+  align-items: center !important;
+  padding: 10px 16px !important;
   border-radius: 8px !important;
-  margin: 3px 6px !important;
   font-weight: 500 !important;
-  transition: all 0.25s ease;
+  color: #333 !important;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* Hover (soft and modern) */
-.standard-sidebar-item:hover,
-.desk-sidebar-item:hover,
-.sidebar-item:hover {
-  background-color: #f6f6f6 !important;
-  color: #5b3e63 !important;
+/* Sidebar hover effect */
+.desk-sidebar .desk-sidebar-item:hover,
+.standard-sidebar-section .sidebar-item:hover {
+  background-color: rgba(1, 126, 132, 0.08) !important; /* subtle teal hover */
+  color: #000 !important;
 }
 
-/* Active item */
-.standard-sidebar-item.selected,
-.desk-sidebar-item.selected,
-.sidebar-item.selected {
-  background-color: #f3ecf6 !important;
-  color: #714B67 !important;
-  font-weight: 600 !important;
-  border-left: 3px solid #714B67 !important;
-}
-
-/* Sidebar icons */
-.standard-sidebar-item .es-icon,
-.desk-sidebar-item .es-icon,
-.sidebar-item .es-icon {
-  color: #714B67 !important;
-  opacity: 0.9 !important;
-  font-size: 1.1rem;
-  margin-right: 6px;
-}
-
-/* Sidebar group titles */
-.sidebar-group-title {
-  color: #9ca3af !important;
-  font-size: 11px !important;
-  font-weight: 600 !important;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin: 12px 14px 4px !important;
-}
-
-/* Subtle scrollbar */
-.layout-side-section::-webkit-scrollbar {
-  width: 6px;
-}
-.layout-side-section::-webkit-scrollbar-thumb {
-  background: #d6d6d6;
-  border-radius: 4px;
-}
-.layout-side-section::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
-}
-
-/* === HEADER REFINEMENT === */
-.navbar,
-.page-head,
-.navbar-container {
-  background: #ffffff !important;
-  border-bottom: 1px solid #eaeaea !important;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
-}
-
-/* Header text & icons */
-.navbar .navbar-brand,
-.navbar a,
-.navbar .dropdown-toggle {
-  color: #2f2f2f !important;
+/* Active / selected item */
+.desk-sidebar .desk-sidebar-item.active,
+.standard-sidebar-section .sidebar-item.active {
+  background-color: rgba(1, 126, 132, 0.12) !important;
+  border-left: 4px solid var(--secondary) !important;
+  color: var(--secondary) !important;
   font-weight: 600 !important;
 }
 
-/* Search box */
-.navbar .search-bar {
-  background: #f9f9f9 !important;
-  border: 1px solid #e0e0e0 !important;
-  border-radius: 6px !important;
+/* Sidebar icon spacing */
+.sidebar-item .icon,
+.desk-sidebar .icon {
+  margin-right: 10px !important;
+  width: 20px !important;
+  height: 20px !important;
+  color: #444 !important;
 }
 
-/* Avatar and icons in header */
-.navbar .avatar,
-.navbar .dropdown-toggle .avatar-small {
-  border: 2px solid #eee !important;
-  border-radius: 50%;
-}
-
-/* === GENERAL PAGE REFINEMENT === */
-.page-content {
-  background: #fafafa !important;
-}
-
-.layout-main-section {
-  background: #ffffff !important;
-  border-radius: 10px !important;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
-  margin-top: 8px !important;
-}
-/* === SIDEBAR WIDTH & LAYOUT FIX === */
-
-/* Increase sidebar width */
-.layout-side-section,
-.standard-sidebar-section,
-.sidebar-container {
-  width: 260px !important;
-  min-width: 260px !important;
-  background: #ffffff !important;
-  border-right: 1px solid #e5e7eb !important;
-}
-
-/* Adjust the main content to fill space correctly */
-.layout-main-section {
-  margin-left: 260px !important;
-  width: calc(100% - 260px) !important;
-}
-
-/* Prevent overflow text clipping in sidebar items */
-.standard-sidebar-item a,
-.sidebar-item-label {
-  white-space: nowrap !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-}
-
-/* Fix unnecessary padding or space between sidebar and main content */
-.page-content,
-.page-head {
-  padding-left: 1rem !important;
-}
-
-/* Sidebar scroll styling */
-.sidebar-container::-webkit-scrollbar {
+/* Fix scrollbar style */
+.standard-sidebar-section::-webkit-scrollbar {
   width: 6px;
 }
-.sidebar-container::-webkit-scrollbar-thumb {
-  background-color: #d1d5db;
-  border-radius: 4px;
+.standard-sidebar-section::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 3px;
 }
-/* === FINAL SIDEBAR + CONTENT ALIGNMENT FIX === */
-
-/* Sidebar width control */
-.layout-side-section {
-  flex: 0 0 260px !important;
-  width: 260px !important;
-  min-width: 260px !important;
-  max-width: 260px !important;
-  background: #ffffff !important;
-  border-right: 1px solid #e5e7eb !important;
-  padding-right: 0 !important;
-  margin-right: 0 !important;
-}
-
-/* Make sure sidebar text fits fully */
-.layout-side-section .sidebar-item-label,
-.standard-sidebar-item,
-.desk-sidebar-item {
-  white-space: normal !important;
-  word-break: break-word !important;
-  overflow: visible !important;
-}
-
-/* Remove space between sidebar and main content */
-.page-content {
-  display: flex !important;
-  flex-wrap: nowrap !important;
-  gap: 0 !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Make content section take full remaining space */
-.layout-main-section {
-  flex: 1 1 auto !important;
-  margin: 0 !important;
-  padding: 16px !important;
-  width: auto !important;
-}
-
-/* Optional: keep sidebar fixed if page scrolls */
-.layout-side-section {
-  position: sticky !important;
-  top: 0 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  z-index: 10 !important;
-}
-
-/* Scrollbar styling for sidebar */
-.layout-side-section::-webkit-scrollbar {
-  width: 6px;
-}
-.layout-side-section::-webkit-scrollbar-thumb {
-  background-color: #d1d5db;
-  border-radius: 4px;
-}
-/* === FINAL POLISH: Sidebar Width + Spacing Fix === */
-
-/* Wider sidebar to show full menu text */
-.layout-side-section,
-.standard-sidebar-section,
-.sidebar-container {
-  width: 280px !important;
-  min-width: 280px !important;
-  max-width: 280px !important;
-  background: #ffffff !important;
-  border-right: 1px solid #e5e7eb !important;
-  box-shadow: none !important;
-}
-
-/* Adjust main section to align perfectly */
-.layout-main-section {
-  margin-left: 280px !important;
-  width: calc(100% - 280px) !important;
-  background: #ffffff !important;
-  border-radius: 10px !important;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
-  padding: 16px 20px !important;
-}
-
-/* Remove any leftover gray strip or gap */
-.page-content {
-  display: flex !important;
-  gap: 0 !important;
-  background: #fafafa !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-
-/* Sidebar text wrapping */
-.standard-sidebar-item a,
-.sidebar-item-label {
-  white-space: normal !important;
-  overflow: visible !important;
-  text-overflow: unset !important;
-}
-
-/* Optional: make sidebar scroll smoothly */
-.layout-side-section {
-  position: sticky !important;
-  top: 0 !important;
-  height: 100vh !important;
-  overflow-y: auto !important;
-  scrollbar-width: thin;
-}
-
-/* Subtle scrollbar for sidebar */
-.layout-side-section::-webkit-scrollbar {
-  width: 6px;
-}
-.layout-side-section::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 4px;
-}
-.layout-side-section::-webkit-scrollbar-thumb:hover {
-  background: #bbb;
+.standard-sidebar-section::-webkit-scrollbar-thumb:hover {
+  background-color: #aaa;
 }
