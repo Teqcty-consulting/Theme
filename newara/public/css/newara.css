@@ -342,3 +342,86 @@ input[type="checkbox"]:checked {
   background-color:  white !important;
   color: black;
 }
+/* ===============================
+   FINAL FORCE-OVERRIDE: White Sidebar + Modern Look
+   Place this at the VERY END of your CSS file
+   =============================== */
+
+/* ensure nothing behind still visible */
+.standard-sidebar-section.nested-container,
+.layout-side-section,
+.desk-sidebar,
+.desk-sidebar .standard-sidebar-section,
+.layout-side-section .desk-sidebar,
+.desk-sidebar .desk-sidebar-item-container,
+.standard-sidebar-section.nested-container:before,
+.standard-sidebar-section.nested-container:after {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  box-shadow: 2px 0 6px rgba(0,0,0,0.04) !important;
+  border-right: 1px solid #e6e9ee !important;
+}
+
+/* override any inline background on child elements */
+.standard-sidebar-section.nested-container *[style*="background"],
+.standard-sidebar-section.nested-container *[style*="background-color"] {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+/* sidebar items */
+.standard-sidebar-section.nested-container .desk-sidebar-item,
+.standard-sidebar-section.nested-container .sidebar-item,
+.standard-sidebar-section.nested-container .standard-sidebar-item {
+  color: #21303a !important;
+  background: transparent !important;
+  border-radius: 10px !important;
+  margin: 6px 8px !important;
+  padding: 8px 12px !important;
+  transition: background-color .18s ease, color .18s ease, transform .18s ease;
+}
+
+/* hover/active */
+.standard-sidebar-section.nested-container .desk-sidebar-item:hover,
+.standard-sidebar-section.nested-container .sidebar-item:hover,
+.standard-sidebar-section.nested-container .standard-sidebar-item:hover {
+  background-color: #faf5f8 !important; /* light pink-ish hover */
+  color: var(--btn-primary) !important;
+  transform: translateX(2px);
+}
+
+.standard-sidebar-section.nested-container .desk-sidebar-item.selected,
+.standard-sidebar-section.nested-container .sidebar-item.selected,
+.standard-sidebar-section.nested-container .standard-sidebar-item.selected,
+.standard-sidebar-section.nested-container .desk-sidebar-item.active,
+.standard-sidebar-section.nested-container .sidebar-item.active {
+  background-color: #f3e6ef !important; /* selected */
+  color: var(--btn-primary) !important;
+  font-weight: 600 !important;
+  border-left: 3px solid var(--btn-primary) !important;
+}
+
+/* icons */
+.standard-sidebar-section.nested-container .es-icon,
+.standard-sidebar-section.nested-container .icon {
+  color: var(--btn-primary) !important;
+  opacity: 0.95 !important;
+}
+
+/* remove any background image layering */
+.standard-sidebar-section.nested-container,
+.standard-sidebar-section.nested-container * {
+  background-image: none !important;
+}
+
+/* ensure main content width reflows properly */
+.layout-main-section {
+  margin-left: 250px !important;
+  width: calc(100% - 250px) !important;
+}
+
+/* make sure this override is last */
+@media (min-width: 992px) {
+  :root {}
+}
