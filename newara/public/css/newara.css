@@ -342,23 +342,124 @@ input[type="checkbox"]:checked {
   background-color:  white !important;
   color: black;
 }
-/* =============================
-   Modern Dashboard Style - ERPNext (Newara)
-   ============================= */
-
-body {
-  background-color: #f8fafc !important;
-  font-family: 'Inter', 'Poppins', sans-serif !important;
-  color: #1e293b !important;
-}
-
-/*.layout-side-section {
-  display: none !important;
-}*/
-
-/* === Modern Collapsible Sidebar Styling === */
+/* === Modern ERPNext Sidebar === */
 .layout-side-section {
-  width: 250px;
-  background-color: #6a1b9a;
+  background-color: #ffffff !important;
+  border-right: 1px solid #eee;
+  padding-top: 1rem;
 }
 
+.sidebar-item {
+  border-radius: 10px;
+  margin: 4px 8px;
+  transition: all 0.2s ease-in-out;
+}
+
+.sidebar-item a,
+.sidebar-item-label {
+  color: #4b4b4b !important;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 10px 14px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  text-decoration: none !important;
+}
+
+.sidebar-item:hover a,
+.sidebar-item:hover .sidebar-item-label {
+  background-color: #f3f1f5 !important;
+  color: #6b1e59 !important;
+}
+
+.sidebar-item.selected a,
+.sidebar-item.selected .sidebar-item-label {
+  background-color: #f4d7e2 !important;
+  color: #6b1e59 !important;
+  font-weight: 600;
+}
+
+/* Sidebar icons */
+.sidebar-item .icon {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+/* === Main Page / Workspace === */
+.page-head,
+.workspace-title,
+.workspace-body {
+  background-color: #f9fafc !important;
+}
+
+.page-head {
+  border: none;
+  padding: 16px 24px;
+}
+
+.page-head h3 {
+  font-size: 22px;
+  font-weight: 700;
+  color: #333;
+}
+
+/* === Modern Cards (Dashboard Blocks) === */
+.widget-group,
+.widget {
+  background: #fff !important;
+  border-radius: 16px !important;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.08);
+  border: none !important;
+  padding: 16px !important;
+}
+
+.widget h6,
+.widget .widget-title {
+  color: #4b4b4b !important;
+  font-weight: 600 !important;
+}
+
+.widget .number {
+  font-size: 26px !important;
+  font-weight: 700;
+  margin-top: 4px;
+}
+
+.widget.danger {
+  background-color: #ffe4e9 !important;
+}
+
+.widget.info {
+  background-color: #e3f2fd !important;
+}
+
+.widget.success {
+  background-color: #e8f5e9 !important;
+}
+
+.widget.warning {
+  background-color: #fff3e0 !important;
+}
+
+/* === Quick Actions / Buttons === */
+.btn {
+  border-radius: 12px !important;
+  font-weight: 500 !important;
+  padding: 8px 16px !important;
+}
+
+.btn-primary {
+  background-color: #7a1f5c !important;
+  border: none !important;
+}
+
+.btn-primary:hover {
+  background-color: #611548 !important;
+}
+
+/* === Page Background === */
+.page-content {
+  background-color: #fafbfc !important;
+  padding: 1.5rem;
+}
