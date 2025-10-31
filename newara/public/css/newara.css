@@ -495,3 +495,214 @@ input[type="checkbox"]:checked {
 .layout-side-section::-webkit-scrollbar-thumb:hover {
   background: #bbb;
 }
+/* === WHITE SIDEBAR REFINEMENT === */
+.layout-side-section,
+.standard-sidebar-section.nested-container,
+.desk-sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #eaeaea !important;
+  box-shadow: none !important;
+}
+
+/* Sidebar items */
+.standard-sidebar-item,
+.desk-sidebar-item,
+.sidebar-item {
+  background: transparent !important;
+  color: #2f2f2f !important;
+  padding: 8px 14px !important;
+  border-radius: 8px !important;
+  margin: 3px 6px !important;
+  font-weight: 500 !important;
+  transition: all 0.25s ease;
+}
+
+/* Hover (soft and modern) */
+.standard-sidebar-item:hover,
+.desk-sidebar-item:hover,
+.sidebar-item:hover {
+  background-color: #f6f6f6 !important;
+  color: #5b3e63 !important;
+}
+
+/* Active item */
+.standard-sidebar-item.selected,
+.desk-sidebar-item.selected,
+.sidebar-item.selected {
+  background-color: #f3ecf6 !important;
+  color: #714B67 !important;
+  font-weight: 600 !important;
+  border-left: 3px solid #714B67 !important;
+}
+
+/* Sidebar icons */
+.standard-sidebar-item .es-icon,
+.desk-sidebar-item .es-icon,
+.sidebar-item .es-icon {
+  color: #714B67 !important;
+  opacity: 0.9 !important;
+  font-size: 1.1rem;
+  margin-right: 6px;
+}
+
+/* Sidebar group titles */
+.sidebar-group-title {
+  color: #9ca3af !important;
+  font-size: 11px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin: 12px 14px 4px !important;
+}
+
+/* Subtle scrollbar */
+.layout-side-section::-webkit-scrollbar {
+  width: 6px;
+}
+.layout-side-section::-webkit-scrollbar-thumb {
+  background: #d6d6d6;
+  border-radius: 4px;
+}
+.layout-side-section::-webkit-scrollbar-thumb:hover {
+  background: #bbb;
+}
+
+/* === HEADER REFINEMENT === */
+.navbar,
+.page-head,
+.navbar-container {
+  background: #ffffff !important;
+  border-bottom: 1px solid #eaeaea !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Header text & icons */
+.navbar .navbar-brand,
+.navbar a,
+.navbar .dropdown-toggle {
+  color: #2f2f2f !important;
+  font-weight: 600 !important;
+}
+
+/* Search box */
+.navbar .search-bar {
+  background: #f9f9f9 !important;
+  border: 1px solid #e0e0e0 !important;
+  border-radius: 6px !important;
+}
+
+/* Avatar and icons in header */
+.navbar .avatar,
+.navbar .dropdown-toggle .avatar-small {
+  border: 2px solid #eee !important;
+  border-radius: 50%;
+}
+
+/* === GENERAL PAGE REFINEMENT === */
+.page-content {
+  background: #fafafa !important;
+}
+
+.layout-main-section {
+  background: #ffffff !important;
+  border-radius: 10px !important;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
+  margin-top: 8px !important;
+}
+/* === SIDEBAR WIDTH & LAYOUT FIX === */
+
+/* Increase sidebar width */
+.layout-side-section,
+.standard-sidebar-section,
+.sidebar-container {
+  width: 260px !important;
+  min-width: 260px !important;
+  background: #ffffff !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+/* Adjust the main content to fill space correctly */
+.layout-main-section {
+  margin-left: 260px !important;
+  width: calc(100% - 260px) !important;
+}
+
+/* Prevent overflow text clipping in sidebar items */
+.standard-sidebar-item a,
+.sidebar-item-label {
+  white-space: nowrap !important;
+  overflow: visible !important;
+  text-overflow: unset !important;
+}
+
+/* Fix unnecessary padding or space between sidebar and main content */
+.page-content,
+.page-head {
+  padding-left: 1rem !important;
+}
+
+/* Sidebar scroll styling */
+.sidebar-container::-webkit-scrollbar {
+  width: 6px;
+}
+.sidebar-container::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+/* === FINAL SIDEBAR + CONTENT ALIGNMENT FIX === */
+
+/* Sidebar width control */
+.layout-side-section {
+  flex: 0 0 260px !important;
+  width: 260px !important;
+  min-width: 260px !important;
+  max-width: 260px !important;
+  background: #ffffff !important;
+  border-right: 1px solid #e5e7eb !important;
+  padding-right: 0 !important;
+  margin-right: 0 !important;
+}
+
+/* Make sure sidebar text fits fully */
+.layout-side-section .sidebar-item-label,
+.standard-sidebar-item,
+.desk-sidebar-item {
+  white-space: normal !important;
+  word-break: break-word !important;
+  overflow: visible !important;
+}
+
+/* Remove space between sidebar and main content */
+.page-content {
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  gap: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+/* Make content section take full remaining space */
+.layout-main-section {
+  flex: 1 1 auto !important;
+  margin: 0 !important;
+  padding: 16px !important;
+  width: auto !important;
+}
+
+/* Optional: keep sidebar fixed if page scrolls */
+.layout-side-section {
+  position: sticky !important;
+  top: 0 !important;
+  height: 100vh !important;
+  overflow-y: auto !important;
+  z-index: 10 !important;
+}
+
+/* Scrollbar styling for sidebar */
+.layout-side-section::-webkit-scrollbar {
+  width: 6px;
+}
+.layout-side-section::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
