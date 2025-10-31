@@ -198,3 +198,55 @@ body, .page-container {
   font-size: 13px;
   border-top: 1px solid var(--border-color);
 }
+/* 🧱 Force White Sidebar (Override ERPNext default purple) */
+.desk-sidebar,
+.standard-sidebar-section,
+.layout-side-section,
+.desk-sidebar .standard-sidebar-section,
+.layout-side-section .desk-sidebar,
+.desk-sidebar .desk-sidebar-item-container {
+  background: #ffffff !important;
+  background-color: #ffffff !important;
+  background-image: none !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
+/* Sidebar items & hover states */
+.desk-sidebar-item,
+.standard-sidebar-item {
+  color: #1e293b !important;
+  background: transparent !important;
+  border-radius: 8px;
+  margin: 4px 8px;
+  padding: 10px 14px !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.desk-sidebar-item:hover,
+.standard-sidebar-item:hover {
+  background-color: #f3f0f2 !important;
+  color: #714B67 !important;
+}
+
+.desk-sidebar-item.selected,
+.standard-sidebar-item.selected {
+  background-color: #f8eaf3 !important;
+  color: #714B67 !important;
+  font-weight: 600;
+}
+
+/* Sidebar icons */
+.desk-sidebar-item .icon,
+.standard-sidebar-item .icon {
+  color: #714B67 !important;
+  opacity: 0.9;
+}
+
+/* Section titles */
+.sidebar-group .sidebar-label {
+  color: #64748b !important;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  margin: 10px 14px 4px;
+}
