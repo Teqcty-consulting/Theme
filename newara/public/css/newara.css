@@ -343,3 +343,15 @@ input[type="checkbox"]:checked {
   background-color:  white !important;
   color: black;
 }
+/* Force-hide 'Login to Frappe' heading */
+.for-login .page-card-head h4,
+.page-card-head h4,
+[data-path="login"] .page-card-head h4,
+.page-card-head > h4 {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
