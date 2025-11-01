@@ -40,6 +40,7 @@
 }
 
 .for-login .page-card-head h4 {
+	display: none !important;
 	color: black !important;
 }
 
