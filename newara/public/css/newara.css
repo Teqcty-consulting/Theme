@@ -355,3 +355,8 @@ input[type="checkbox"]:checked {
     margin: 0 !important;
     padding: 0 !important;
 }
+/* Make sidebar and main dashboard white only */
+.layout-side-section,
+.layout-main-section {
+    background-color: #ffffff !important;
+}
