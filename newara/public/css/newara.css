@@ -85,4 +85,81 @@ body,
 }
 
 /* Sidebar styling (white, slightly wider, no shadow) */
-.layou
+.layout-side-section {
+	background-color: #ffffff !important;
+	width: 260px !important;
+	min-width: 260px !important;
+	border-right: 1px solid #e0e0e0 !important;
+	box-shadow: none !important;
+}
+
+/* Remove any gap between sidebar and main section */
+.layout-main-section {
+	margin-left: 0 !important;
+	padding-left: 1.2rem !important;
+}
+
+/* Responsive tweak */
+@media (max-width: 991px) {
+	.layout-side-section {
+		width: 220px !important;
+		min-width: 220px !important;
+	}
+}
+
+/* ---------------- DASHBOARD ---------------- */
+
+.desk-sidebar-item {
+	line-height: 2.2;
+}
+
+.widget.links-widget-box,
+.widget.dashboard-widget-box {
+	border: 1px solid #714B6780;
+}
+
+.widget.links-widget-box .widget-head .widget-label .widget-title {
+	background-color: white;
+	color: #714B67 !important;
+}
+
+/* ---------------- BUTTONS ---------------- */
+
+.btn {
+	border-radius: 0.25rem !important;
+}
+
+.btn.btn-primary {
+	color: var(--text-btn-color);
+	border: solid 2px #714b67 !important;
+}
+
+.btn.btn-primary:hover {
+	background: var(--btn-default-hover-bg) !important;
+	border: solid 2px #714b67 !important;
+	color: var(--text-color);
+}
+
+.standard-actions .btn.btn-secondary {
+	background: var(--secondary) !important;
+	border: solid 2px var(--secondary) !important;
+	color: var(--text-btn-color);
+}
+
+.standard-actions .btn.btn-secondary:hover {
+	background: var(--btn-default-hover-bg) !important;
+	border: solid 2px var(--secondary) !important;
+	color: var(--text-color);
+}
+
+.btn.btn-new-doc {
+	background-color: #714b67 !important;
+	color: var(--text-btn-color);
+	border: solid 2px #714b67 !important;
+}
+
+.btn.btn-new-doc:hover {
+	background: var(--btn-default-hover-bg) !important;
+	border: solid 2px #714b67 !important;
+	color: var(--text-color);
+}
